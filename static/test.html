@@ -38,6 +38,7 @@
   // 接受父页面发来的信息
   window.addEventListener("message", function (event) {
     var data = event.data;
+    // 只有接收父页面的消息，才会建立通信，确定orgin、source保证安全性
     orgin = event.origin;
     source = event.source;
     switch (data.cmd) {
